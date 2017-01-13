@@ -1243,6 +1243,16 @@ public final class CMSettings {
         public static final Validator BATTERY_LIGHT_FULL_COLOR_VALIDATOR =
                 sColorValidator;
 
+	/**
+         * Whether to enable the pixel navbar animation
+         * @hide
+         */
+        public static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
+
+	/** @hide */
+        public static final Validator PIXEL_NAV_ANIMATION_VALIDATOR =
+                sBooleanValidator;
+
         /**
          * Sprint MWI Quirk: Show message wait indicator notifications
          * @hide
@@ -1984,6 +1994,7 @@ public final class CMSettings {
                 CMSettings.System.HEADSET_CONNECT_PLAYER,
                 CMSettings.System.ZEN_ALLOW_LIGHTS,
                 CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
+		CMSettings.System.PIXEL_NAV_ANIMATION,
         };
 
         /**
@@ -2150,6 +2161,7 @@ public final class CMSettings {
                     DISPLAY_PICTURE_ADJUSTMENT_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
+	    VALIDATORS.put(PIXEL_NAV_ANIMATION, PIXEL_NAV_ANIMATION_VALIDATOR);
         };
         // endregion
     }
